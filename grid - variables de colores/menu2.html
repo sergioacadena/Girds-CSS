@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú con Transición en Submenú</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 10px;
+      display: inline-block;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      background-color: #008F8C;
+      width: 140px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.5s ease; /* Transición en la propiedad opacity */
+    }
+
+    ul:hover {
+      display: block;
+      opacity: 1;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    li a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a:hover li{
+      display: block;
+      background-color: #005C59;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="menu">
+  <a href="#">Inicio</a>
+  <ul>
+    <li><a href="#">Opción 1</a></li>
+    <li><a href="#">Opción 2</a></li>
+    <li><a href="#">Opción 3</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

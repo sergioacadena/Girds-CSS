@@ -1,0 +1,54 @@
+:root{
+	
+  --colorfondo: rgba(51, 255, 0, 0.589); 
+  --colorgrillas: rgb(64, 66, 64); 
+}
+.contenedor{
+	background-color:var(--colorfondo);
+	border:2px solid #010101;
+        height: 1200px;
+	      display: grid;
+  	    grid: 150px 150px 150px/ auto auto auto auto; /* imera opción cantidad y tamaño de filas
+	      					                                    segunda opción cantidad y tamaño de columnas o altura */
+        position:  relative;
+  	    grid-gap: 10px;
+    	  padding: 10px;
+}
+.contenedor > div {
+  background-color: var(--colorgrillas);
+  text-align: center;
+  padding: 20px 0;
+}
+.grande{
+    transition: all 2s ease;
+    background-color:#3abd4b!important; /*el important leda color priemro que la regla anterior
+		si no se añade queda el color de la grilla */ 
+    display: grid;
+    grid-area: 2 / 3 / span 2 / span 3;/* posición en y / posición en x/tamaño en Y/tamaño en x 
+					          posición y tamaño en cantidad de celdas*/ 
+    
+}
+.grande:hover{
+ 
+    background-color: #e2cbe4!important;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+.grande:hover:after {
+  width: 100%;
+
+}
+.grande:after  {
+  content: "";
+  position:  absolute;
+  z-index: 0;
+  transition: all 1s ease;
+  left: 0;
+  bottom: 0;
+  height:100%;
+  width: 0;
+  background-color:#B43ABD;
+  opacity: 0.9;
+}
