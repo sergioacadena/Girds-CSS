@@ -1,0 +1,20 @@
+.contenedor{
+	background-color:#464646;
+	border:2px solid #010101;
+    	height: 1200px;
+	display: grid;
+	grid: 150px 150px 150px/ auto auto auto; /* primera opción cantidad y tamaño de filas
+	segunda opción cantidad y tamaño de columnas */
+	grid-gap: 10px;/*separación entre celdas, si no se añade, quedan todas en el centro*/
+	padding: 10px;
+}
+.contenedor > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  
+}
+.centro{
+  background-color:#363636!important; /*el important leda color priemro que la regla anterior
+					si no se añade queda el color de la grilla */ 
+}
