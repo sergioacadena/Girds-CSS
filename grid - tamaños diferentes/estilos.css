@@ -1,0 +1,52 @@
+.contenedor{
+	background-color:#464646;
+	border:2px solid #010101;
+        height: 1200px;
+	      display: grid;
+        /* si la grilla es de 4 celdas, deben haber cuatro elementos o contenedores ("div detro de la grilla") o toma solo los que hay */
+  	    grid: 150px 150px 150px / auto auto auto auto; /* primera opción cantidad y tamaño de filas
+	      segunda opción cantidad y tamaño de columnas o altura */
+        /* en otras palabras, tres filas de 150 de largo y 3 columnas auto de ancho */
+        position:  relative;
+  	    grid-gap: 10px;
+    	  padding: 10px;
+}
+.contenedor > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.grande{
+    transition: all 2s ease;
+    background-color:#B43ABD!important; /*el important leda color priemro que la regla anterior
+		si no se añade queda el color de la grilla */ 
+    grid-area: 2 / 3 / span 1 / span 2;/* grid-area es la posición (2 "y"/3 "x") y el tamño en catidad de celdas (span 2 / span 2) dentro de la grilla
+     creada en el contenedor padre, la referencia es la esquina inferior izquierda de la caja*/ 
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+.grande:hover{
+ 
+    background-image:url("tras.jpg")!important;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+.grande:hover:after {
+  width: 100%;
+
+}
+.grande:after  {
+  content: "";
+  position:  absolute;
+  z-index: 0;
+  transition: all 1s ease;
+  left: 0;
+  bottom: 0;
+  height:100%;
+  width: 0;
+  background-color:#B43ABD;
+  opacity: 0.9;
+}
